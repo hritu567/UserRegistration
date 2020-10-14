@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
 shopt -s extglob
-read -p "Enter email " email
-pat="^[a-zA-Z0-9]+([.+-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-z]{2,4}([.][a-z]{2})*$"
-if [[ $email =~ $pat ]]
+read -p "Enter Mobile number " number
+pat="^((\+){1}91){1}[ ][0-9]{10}$"
+if [[ $number =~ $pat ]]
 then
   echo "valid"
 else
