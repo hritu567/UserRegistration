@@ -1,2 +1,11 @@
 #!/bin/bash -x
-echo "User Registration"
+
+shopt -s extglob
+read -p "Enter First Name " name
+pat="^[A-Z]{1}[a-z]{2,}$"
+if [[ $name =~ $pat ]]
+then
+  echo "valid"
+else
+  echo "Invalid"
+fi
