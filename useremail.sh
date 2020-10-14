@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
 shopt -s extglob
-read -p "Enter Mobile number " number
-pat="^((\+){1}91){1}[ ][0-9]{10}$"
-if [[ $number =~ $pat ]]
+read -p "Enter password " pass
+pat="^[a-zA-Z0-9]{8,}$"
+if [[ $pass =~ $pat ]]
 then
   echo "valid"
 else
